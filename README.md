@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+25 + 5 Clock
+This is a pomodoro timer built according to the user stories provided by FCC.
+They are as follows :
 
-## Getting Started
+User Story #1: I can see an element with id="break-label" that contains a string (e.g. "Break Length").
 
-First, run the development server:
+User Story #2: I can see an element with id="session-label" that contains a string (e.g. "Session Length").
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+User Story #3: I can see two clickable elements with corresponding IDs: id="break-decrement" and id="session-decrement".
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+User Story #4: I can see two clickable elements with corresponding IDs: id="break-increment" and id="session-increment".
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+User Story #5: I can see an element with a corresponding id="break-length", which by default (on load) displays a value of 5.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+User Story #6: I can see an element with a corresponding id="session-length", which by default displays a value of 25.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+User Story #7: I can see an element with a corresponding id="timer-label", that contains a string indicating a session is initialized (e.g. "Session").
 
-## Learn More
+User Story #8: I can see an element with corresponding id="time-left". NOTE: Paused or running, the value in this field should always be displayed in mm:ss format (i.e. 25:00).
 
-To learn more about Next.js, take a look at the following resources:
+User Story #9: I can see a clickable element with a corresponding id="start_stop".
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+User Story #10: I can see a clickable element with a corresponding id="reset".
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+User Story #11: When I click the element with the id of reset, any running timer should be stopped, the value within id="break-length" should return to 5, the value within id="session-length" should return to 25, and the element with id="time-left" should reset to it's default state.
 
-## Deploy on Vercel
+User Story #12: When I click the element with the id of break-decrement, the value within id="break-length" decrements by a value of 1, and I can see the updated value.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+User Story #13: When I click the element with the id of break-increment, the value within id="break-length" increments by a value of 1, and I can see the updated value.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+User Story #14: When I click the element with the id of session-decrement, the value within id="session-length" decrements by a value of 1, and I can see the updated value.
+
+User Story #15: When I click the element with the id of session-increment, the value within id="session-length" increments by a value of 1, and I can see the updated value.
+
+User Story #16: I should not be able to set a session or break length to <= 0.
+
+User Story #17: I should not be able to set a session or break length to > 60.
+
+User Story #18: When I first click the element with id="start_stop", the timer should begin running from the value currently displayed in id="session-length", even if the value has been incremented or decremented from the original value of 25.
+
+User Story #19: If the timer is running, the element with the id of time-left should display the remaining time in mm:ss format (decrementing by a value of 1 and updating the display every 1000ms).
+
+User Story #20: If the timer is running and I click the element with id="start_stop", the countdown should pause.
+
+User Story #21: If the timer is paused and I click the element with id="start_stop", the countdown should resume running from the point at which it was paused.
+
+User Story #22: When a session countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of timer-label should display a string indicating a break has begun.
+
+User Story #23: When a session countdown reaches zero (NOTE: timer MUST reach 00:00), a new break countdown should begin, counting down from the value currently displayed in the id="break-length" element.
+
+User Story #24: When a break countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of timer-label should display a string indicating a session has begun.
+
+User Story #25: When a break countdown reaches zero (NOTE: timer MUST reach 00:00), a new session countdown should begin, counting down from the value currently displayed in the id="session-length" element.
+
+User Story #26: When a countdown reaches zero (NOTE: timer MUST reach 00:00), a sound indicating that time is up should play. This should utilize an HTML5 audio tag and have a corresponding id="beep".
+
+User Story #27: The audio element with id="beep" must be 1 second or longer.
+
+User Story #28: The audio element with id of beep must stop playing and be rewound to the beginning when the element with the id of reset is clicked.
+
+Deploy link : https://twenty-five-plus-five-clock.vercel.app/
